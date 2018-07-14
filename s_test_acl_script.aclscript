@@ -11,6 +11,7 @@ COMMENT s_test_acl_script
 
  COM *** Create table t_stub
   CREATE LAYOUT t_stub WIDTH 50 RECORD 1 
+  OPEN t_stub
 
  COM *** Run subscript
  

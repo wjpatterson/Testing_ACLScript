@@ -4,6 +4,10 @@ COMMENT s_test_acl_script
   SET SAFETY OFF 
   SET EXACT ON 
   SET FOLDER /ACL_test
+  
+ COM *** Delete previous results 
+  DELETE LAYOUT t_subscript_count OK 
+  DELETE 't_subscript_count.fil' OK 
 
  COM *** Open and summarize target table 
   OPEN %v_target_table%

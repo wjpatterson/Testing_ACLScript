@@ -2,5 +2,5 @@
   v_target_table = 'my_table'
   v_target_field = 'my_field'
   
-  DO SCRIPT 's_test_acl_script.txt'
+  DO SCRIPT 's_test_acl_script.aclscript'
   

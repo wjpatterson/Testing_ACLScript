@@ -1,0 +1,5 @@
+ COM *** Subscript 
+ 
+  EXPORT %v_step% AS COUNT TO r_subscript_count APPEND 
+ 
+   v_step = v_step + 1 

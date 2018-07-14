@@ -1,0 +1,15 @@
+COMMENT s_test_acl_script
+
+ COM *** Setting script environment 
+  SET SAFETY OFF 
+  SET EXACT ON 
+  SET FOLDER /ACL_test
+
+
+
+ COM *** Resetting environment 
+  SET FOLDER 
+  SET EXACT OFF 
+  SET SAFETY ON
+
+ COM *** End of script 

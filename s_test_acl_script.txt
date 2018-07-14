@@ -5,7 +5,9 @@ COMMENT s_test_acl_script
   SET EXACT ON 
   SET FOLDER /ACL_test
 
-
+ COM *** Open and summarize target table 
+  OPEN %v_target_table%
+  SUMMARIZE ON %v_target_field% TO r_results PRESORT 
 
  COM *** Resetting environment 
   SET FOLDER 

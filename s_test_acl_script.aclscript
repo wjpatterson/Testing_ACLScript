@@ -1,0 +1,33 @@
+COMMENT s_test_acl_script
+
+ COM *** Setting script environment 
+  SET SAFETY OFF 
+  SET EXACT ON 
+  SET FOLDER /ACL_test
+
+ COM *** Open and summarize target table 
+  OPEN %v_target_table%
+  SUMMARIZE ON %v_target_field% TO r_results PRESORT 
+
+ COM *** Create table t_stub
+  CREATE LAYOUT t_stub WIDTH 50 RECORD 1 
+
+ COM *** Run subscript
+ 
+    DELETE SCRIPT s_test_subscript OK 
+    DELETE SCRIPT s_test_subscript2 OK 
+ 
+  v_step = 1 
+  DO SCRIPT 's_test_subscript.aclscript' WHILE v_step <= 10
+
+    DELETE SCRIPT s_test_subscript OK 
+    DELETE SCRIPT s_test_subscript2 OK
+
+  OPEN t_subscript_count
+
+ COM *** Resetting environment 
+  SET FOLDER 
+  SET EXACT OFF 
+  SET SAFETY ON
+
+ COM *** End of script 
